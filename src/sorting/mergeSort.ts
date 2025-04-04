@@ -1,8 +1,8 @@
 export function mergeSort(arr: number[], low: number, high: number) {
   // Base case
   if (low >= high) return;
+  // Recursively half the array in each iteration
   let mid = Math.floor((low + high) / 2);
-  //   Recursively half the array in each iteration
   mergeSort(arr, low, mid);
   mergeSort(arr, mid + 1, high);
   merge(arr, low, mid, high);

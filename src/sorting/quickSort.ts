@@ -21,7 +21,9 @@ function partition(arr: number[], low: number, high: number): number {
       right--;
     }
     // Swap to bring the smaller elements on the left and vice versa.
-    if (left < right) [arr[left], arr[right]] = [arr[right], arr[left]];
+    if (left < right) {
+      [arr[left], arr[right]] = [arr[right], arr[left]];
+    }
   }
   [arr[right], arr[low]] = [arr[low], arr[right]];
   return right;
